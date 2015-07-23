@@ -5,12 +5,12 @@
 #
 # This file is a module for Ansible that interacts with Trigger
 #
-# Ansible is free software: you can redistribute it and/or modify
+# This module is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
 #
-# Ansible is distributed in the hope that it will be useful,
+# This software is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.    See the
 # GNU General Public License for more details.
@@ -22,15 +22,14 @@
 DOCUMENTATION = """
 ---
 module: trigger_command
-short_description: Sends arbitrary commands to devices via the Commando API
+short_description: Sends arbitrary commands to devices via the Trigger framework
 description:
   - The trigger_command module provides a module for sending arbitray
-    commands to a node and returns the ouput. 
+    commands to a network node and returns the ouput. 
 version_added: 0.0.0
 category: System
 author: Mike Biancaniello (@chepazzo)
 requirements:
-  - Commando API 0.3.3 or later installed on remote server
   - trigger>=1.5.2
 notes:
   - This module does not support idempotent operations.
@@ -41,24 +40,20 @@ options:
       - Specifies the command to send to the node and execute
         in the configured mode.
     required: true
-    version_added: 0.0.0
   device:
     description:
       - Specifies the devicename on which to execute the commands.
     required: true
-    version_added: 0.0.0
   username:
     description:
-      - Specify the username
+      - Specify the username. If omitted, Trigger will try to figure it out.
     required: false
     default: null
-    version_added: 0.0.0
   password:
     description:
-      - Specify the password
+      - Specify the password. If omitted, Trigger will try to figure it out.
     required: false
     default: null
-    version_added: 0.0.0
 """
 
 EXAMPLES = """
