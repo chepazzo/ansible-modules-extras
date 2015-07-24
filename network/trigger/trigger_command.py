@@ -104,7 +104,7 @@ def send_command(module):
         creds = (u,p)
     try:
         n = Do(devices=[d], commands=[c], creds=creds, verbose=VERBOSE, debug=DEBUG, timeout=TIMEOUT, production_only=PROD_ONLY)
-    except Exception as e:
+    except Exception:
         module.fail_json(msg=str(e))
         return False
     ## run() will send the commands to the device.
