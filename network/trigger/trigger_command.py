@@ -26,7 +26,7 @@ short_description: Sends arbitrary commands to devices via the Trigger framework
 description:
   - The trigger_command module provides a module for sending arbitray
     commands to a network node and returns the ouput. 
-version_added: 0.0.0
+version_added: "1.9"
 category: System
 author: Mike Biancaniello (@chepazzo)
 requirements:
