@@ -129,7 +129,7 @@ def send_command(d,c,creds):
         str: Text output from device.
     '''
     try:
-        n = Do(devices=[d], commands=[c], creds=creds, verbose=VERBOSE, debug=DEBUG, timeout=TIMEOUT, production_only=PROD_ONLY,foce_cli=FORCE_CLI)
+        n = Do(devices=[d], commands=[c], creds=creds, verbose=VERBOSE, debug=DEBUG, timeout=TIMEOUT, production_only=PROD_ONLY,force_cli=FORCE_CLI)
     except Exception:
         return None
     ## run() will send the commands to the device.
